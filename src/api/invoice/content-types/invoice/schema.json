@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invoices",
+  "info": {
+    "singularName": "invoice",
+    "pluralName": "invoices",
+    "displayName": "Invoice",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "dueDate": {
+      "type": "date"
+    },
+    "billsTo": {
+      "type": "string"
+    },
+    "shipsTo": {
+      "type": "string"
+    },
+    "additionalNotes": {
+      "type": "text"
+    },
+    "discount": {
+      "type": "decimal"
+    },
+    "tax": {
+      "type": "decimal"
+    },
+    "shipping": {
+      "type": "float"
+    },
+    "totalBT": {
+      "type": "float"
+    },
+    "totalTI": {
+      "type": "float"
+    },
+    "paid": {
+      "type": "float"
+    },
+    "balanceDue": {
+      "type": "float"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::item.item",
+      "mappedBy": "invoice"
+    }
+  }
+}

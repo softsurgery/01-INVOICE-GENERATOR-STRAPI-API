@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_terms",
+  "info": {
+    "singularName": "payment-term",
+    "pluralName": "payment-terms",
+    "displayName": "Payment Term",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "method": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
